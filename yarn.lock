@@ -149,14 +149,45 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@netlify/functions@^1.1.0", "@netlify/functions@^1.3.0":
+"@netlify/esbuild-darwin-arm64@0.14.39":
+  "integrity" "sha512-b7rtnX/VtYwNbUCxs3eulrCWJ+u2YvqDcXiIV1ka+od+N0fTx+4RrVkVp1lha9L0wEJYK9J7UWZOMLMyd1ynRg=="
+  "resolved" "https://registry.npmjs.org/@netlify/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.39.tgz"
+  "version" "0.14.39"
+
+"@netlify/esbuild@0.14.39":
+  "integrity" "sha512-C3xpwdT2xw6SnSb+hLQoxjtikAKiz6BjQjzlIaysHDpGbmIcmUHZ/X+dyLtCqAvf15WNK5GSBZYOlpgcOE0WZA=="
+  "resolved" "https://registry.npmjs.org/@netlify/esbuild/-/esbuild-0.14.39.tgz"
+  "version" "0.14.39"
+  optionalDependencies:
+    "@netlify/esbuild-android-64" "0.14.39"
+    "@netlify/esbuild-android-arm64" "0.14.39"
+    "@netlify/esbuild-darwin-64" "0.14.39"
+    "@netlify/esbuild-darwin-arm64" "0.14.39"
+    "@netlify/esbuild-freebsd-64" "0.14.39"
+    "@netlify/esbuild-freebsd-arm64" "0.14.39"
+    "@netlify/esbuild-linux-32" "0.14.39"
+    "@netlify/esbuild-linux-64" "0.14.39"
+    "@netlify/esbuild-linux-arm" "0.14.39"
+    "@netlify/esbuild-linux-arm64" "0.14.39"
+    "@netlify/esbuild-linux-mips64le" "0.14.39"
+    "@netlify/esbuild-linux-ppc64le" "0.14.39"
+    "@netlify/esbuild-linux-riscv64" "0.14.39"
+    "@netlify/esbuild-linux-s390x" "0.14.39"
+    "@netlify/esbuild-netbsd-64" "0.14.39"
+    "@netlify/esbuild-openbsd-64" "0.14.39"
+    "@netlify/esbuild-sunos-64" "0.14.39"
+    "@netlify/esbuild-windows-32" "0.14.39"
+    "@netlify/esbuild-windows-64" "0.14.39"
+    "@netlify/esbuild-windows-arm64" "0.14.39"
+
+"@netlify/functions@^1.3.0":
   "integrity" "sha512-hN/Fgpz8XIOBfsBPLYUMxVKBlCopgeqGB0popayicnmkFLnvKByTTMYgF01wcF9DBtBQdV0H2h1kPFpMl34I8w=="
   "resolved" "https://registry.npmjs.org/@netlify/functions/-/functions-1.3.0.tgz"
   "version" "1.3.0"
   dependencies:
     "is-promise" "^4.0.0"
 
-"@netlify/ipx@^1.2.1":
+"@netlify/ipx@^1.3.1":
   "integrity" "sha512-kjw26KYM1jLe+bGRnhqxWs0ACG8eg6kN6wV7uqUu1J8dE6QC73ksyVtCA6IAHl3/5qf5RyMUzquNCp0N0+lXEw=="
   "resolved" "https://registry.npmjs.org/@netlify/ipx/-/ipx-1.3.1.tgz"
   "version" "1.3.1"
@@ -172,17 +203,22 @@
     "ufo" "^0.8.0"
     "unstorage" "^0.6.0"
 
-"@netlify/plugin-nextjs@4.16.0":
-  "integrity" "sha512-4vGP2FiIF5/qUlaRnufNlLXU6F3abDCsGlx2hlci2PpGr28suNsFcW0+XatQnL2go4DuwcU6LiOGc/t8UVdPEQ=="
-  "resolved" "https://registry.npmjs.org/@netlify/plugin-nextjs/-/plugin-nextjs-4.16.0.tgz"
-  "version" "4.16.0"
+"@netlify/plugin-nextjs@4.28.4":
+  "integrity" "sha512-LROz2k2xJvieqZFUmx2tCCnh0gry0NA1i8isSTZCILIId86zelt7B9mtvr5rnBAdEq09b9Ak2f+p59g7pDSrOw=="
+  "resolved" "https://registry.npmjs.org/@netlify/plugin-nextjs/-/plugin-nextjs-4.28.4.tgz"
+  "version" "4.28.4"
   dependencies:
-    "@netlify/functions" "^1.1.0"
-    "@netlify/ipx" "^1.2.1"
+    "@netlify/esbuild" "0.14.39"
+    "@netlify/functions" "^1.3.0"
+    "@netlify/ipx" "^1.3.1"
     "@vercel/node-bridge" "^2.1.0"
     "chalk" "^4.1.2"
+    "destr" "^1.1.1"
+    "execa" "^5.1.1"
+    "follow-redirects" "^1.15.2"
     "fs-extra" "^10.0.0"
     "globby" "^11.0.4"
+    "merge-stream" "^2.0.0"
     "moize" "^6.1.0"
     "node-fetch" "^2.6.6"
     "node-stream-zip" "^1.15.0"
@@ -190,6 +226,7 @@
     "p-limit" "^3.1.0"
     "pathe" "^0.2.0"
     "pretty-bytes" "^5.6.0"
+    "regexp-tree" "^0.1.24"
     "semver" "^7.3.5"
     "slash" "^3.0.0"
     "tiny-glob" "^0.2.9"
@@ -2215,6 +2252,11 @@
 
 "flatted@^3.1.0":
   "version" "3.2.5"
+
+"follow-redirects@^1.15.2":
+  "integrity" "sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA=="
+  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
+  "version" "1.15.2"
 
 "forever-agent@~0.6.1":
   "integrity" "sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw=="
@@ -4364,7 +4406,7 @@
     "commander" "^5.0.0"
     "express" "^4.17.1"
 
-"next@*", "next@latest":
+"next@latest":
   "integrity" "sha512-b1xlxEozmAWokAXzXsi5vlmU/IfJcFNIJA8dpU5UdkFbyDPio8wwb8mAQ/Y7rGtfTgG/t/u49BiyEA+xAgFvow=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.2.4.tgz"
   "version" "12.2.4"
@@ -5131,6 +5173,11 @@
   "integrity" "sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA=="
   "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
   "version" "0.13.9"
+
+"regexp-tree@^0.1.24":
+  "integrity" "sha512-s2aEVuLhvnVJW6s/iPgEGK6R+/xngd2jNQ+xy4bXNDKxZKJH6jpPHY6kVeVv1IeLCHgswRj+Kl3ELaDjG6V1iw=="
+  "resolved" "https://registry.npmjs.org/regexp-tree/-/regexp-tree-0.1.24.tgz"
+  "version" "0.1.24"
 
 "regexp.prototype.flags@^1.4.1", "regexp.prototype.flags@^1.4.3":
   "integrity" "sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA=="
