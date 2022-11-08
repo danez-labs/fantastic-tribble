@@ -20,9 +20,6 @@
     "export": "next build && next export",
     "lint": "next lint"
   },
-  "engines": {
-    "node": "12.20.0"
-  },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@netlify/plugin-nextjs": "4.16.0",
@@ -39,7 +36,6 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^3.7.1",
     "autoprefixer": "^10.4.0",
     "eslint": "<9.0.0",
     "eslint-config-next": "12.3.2",
